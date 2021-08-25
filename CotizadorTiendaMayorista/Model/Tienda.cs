@@ -27,7 +27,7 @@ namespace CotizadorTiendaMayorista.Modelo
         }
 
 
-        public bool RecorrerStock(List<Prenda> Prendas, Prenda prenda)
+        public bool CheckStock(List<Prenda> Prendas, Prenda prenda)
         {
             bool ret = false;
 

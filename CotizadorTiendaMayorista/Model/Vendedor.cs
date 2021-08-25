@@ -6,14 +6,14 @@ using System.Threading.Tasks;
 
 namespace CotizadorTiendaMayorista.Modelo
 {
-    class Vendedor
+   public class Vendedor
     {
         private int idVendedor;
         private string nombre;
         private string apellido;
         private Cotizacion cotizacionActual;
         private Tienda tienda;
-        private  List<Cotizacion> historialCotizaciones= new List<Cotizacion>();
+        private  List<Cotizacion> historial= new List<Cotizacion>();
              
 
 
@@ -22,7 +22,7 @@ namespace CotizadorTiendaMayorista.Modelo
         public string Apellido { get => apellido;  }
         internal Cotizacion CotizacionActual { get => cotizacionActual; set => cotizacionActual = value; }
         public Tienda Tienda { get => tienda; set => tienda = value; }
-        public List<Cotizacion> HistorialCotizaciones { get => historialCotizaciones; }
+        public List<Cotizacion> Historial { get => historial; }
 
       
 
@@ -46,14 +46,14 @@ namespace CotizadorTiendaMayorista.Modelo
         {
             DateTime now = DateTime.Now;
             Prenda temp = Cotizacion.MakeClothes(pantalon, mangaCorta, cuelloMao, chupin, calidadStandard, precio, cantidad);
-            decimal val = Calcular(temp, cantidad);
+            decimal val = Calculate(temp, cantidad);
 
             
-            if (Tienda.RecorrerStock(Tienda.Prendas, temp))
+            if (Tienda.CheckStock(Tienda.Prendas, temp))
             {
                 CotizacionActual = new Cotizacion(CreateIdCotizacion(), now, IdVendedor, temp, cantidad, val);
 
-                HistorialCotizaciones.Add(CotizacionActual);
+                Historial.Add(CotizacionActual);
                 
                 return CotizacionActual.ValorCotizacion;
             }
@@ -70,9 +70,9 @@ namespace CotizadorTiendaMayorista.Modelo
             return idRandom.Next(1, 2147483647);
         }
 
-        private static decimal Calcular(Prenda p, int _count)
+        private static decimal Calculate(Prenda p, int _count)
         {
-            return p.CalcularPrecio() * _count;
+            return p.CalculatePrice() * _count;
         }
 
     }

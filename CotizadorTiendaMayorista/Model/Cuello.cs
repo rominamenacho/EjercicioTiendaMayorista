@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CotizadorTiendaMayorista.Modelo
 {
-    abstract class Cuello
+   public abstract class Cuello
     {
         private string descripcion;
 
@@ -14,7 +14,7 @@ namespace CotizadorTiendaMayorista.Modelo
 
         protected Cuello(string descripcion)
         {
-            this.descripcion = descripcion;
+            this.Descripcion = descripcion;
         }
     }
 }

@@ -33,10 +33,10 @@ namespace CotizadorTiendaMayorista
 
 
         private void CargarGrilla() {
-            if (init.Vendedor.HistorialCotizaciones != null && init.Vendedor.HistorialCotizaciones.Count > 0)
+            if (init.Vendedor.Historial != null && init.Vendedor.Historial.Count > 0)
             {
               
-                foreach (var i in init.Vendedor.HistorialCotizaciones)
+                foreach (var i in init.Vendedor.Historial)
                 {
                     int n = dgv1.Rows.Add();
                     dgv1.Rows[n].Cells[0].Value = i.IdVendedor;

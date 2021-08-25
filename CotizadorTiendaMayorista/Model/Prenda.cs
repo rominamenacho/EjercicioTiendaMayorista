@@ -4,21 +4,21 @@
     {
         private Calidad calidad;
         private decimal precioUnitario;
-        private int cantidadStock;
+        private int cantidad;
 
         public decimal PrecioUnitario { get => precioUnitario;  }
-        public int CantidadStock { get => cantidadStock;  }
+        public int CantidadStock { get => cantidad;  }
         public Calidad Calidad { get => calidad;  }
 
-        public Prenda( Calidad calidad, decimal precioUnitario, int cantidadStock)
+        public Prenda( Calidad calidad, decimal precioUnitario, int cantidad)
         {
             this.calidad = calidad;
             this.precioUnitario = precioUnitario;
-            this.cantidadStock = cantidadStock;
+            this.cantidad = cantidad;
 
         }
 
-        public virtual decimal CalcularPrecio() {
+        public virtual decimal CalculatePrice() {
             decimal retorno = 0;
 
             if(calidad is Premium)
@@ -34,9 +34,6 @@
             return retorno;
         }
 
-      
-
-
-        
+              
     }
 }

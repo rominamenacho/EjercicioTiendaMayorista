@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace CotizadorTiendaMayorista.Modelo
 {
    
-        abstract class ParManga
+      public abstract class ParManga
         {
             private string descripcion;
 
@@ -15,7 +15,7 @@ namespace CotizadorTiendaMayorista.Modelo
 
             protected ParManga(string descripcion)
             {
-                this.descripcion = descripcion;
+                this.Descripcion = descripcion;
             }
         }
     }

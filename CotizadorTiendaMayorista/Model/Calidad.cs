@@ -10,9 +10,13 @@ namespace CotizadorTiendaMayorista.Modelo
     {
         private string descripcion;
 
+        public string Descripcion { get => descripcion; set => descripcion = value; } 
+
         protected Calidad(string descripcion)
         {
-            this.descripcion = descripcion;
+            this.Descripcion = descripcion;
         }
+
+       
     }
 }

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CotizadorTiendaMayorista.Modelo
 {
-    class Camisa:Prenda
+  public class Camisa:Prenda
     {
         private ParManga manga;
         private Cuello cuello;
@@ -22,9 +22,9 @@ namespace CotizadorTiendaMayorista.Modelo
             this.Cuello = cuello;
         }
 
-        public override decimal CalcularPrecio()
+        public override decimal CalculatePrice()
         {
-            decimal retorno = base.CalcularPrecio();
+            decimal retorno = base.CalculatePrice();
             if (Manga is Corta ) {
                 if(Cuello is Mao)
                 {

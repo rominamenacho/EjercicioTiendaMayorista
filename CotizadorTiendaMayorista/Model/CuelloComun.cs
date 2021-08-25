@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CotizadorTiendaMayorista.Modelo
 {
-    class CuelloComun : Cuello
+   public class CuelloComun : Cuello
     {
         public CuelloComun(string descripcion) : base(descripcion)
         {

@@ -6,13 +6,13 @@ using System.Threading.Tasks;
 
 namespace CotizadorTiendaMayorista.Modelo
 {
-  public  class Cotizacion
+  public class Cotizacion
     {
         private int idCotizacion;
         private DateTime fechaHora;
         private int idVendedor;
         private Prenda prenda;
-        private int cantidadUnidadesCotizadas;
+        private int unidadesCotizadas;
         private decimal valorCotizacion;
 
 
@@ -20,7 +20,7 @@ namespace CotizadorTiendaMayorista.Modelo
         public DateTime FechaHora { get => fechaHora; }
         public int IdVendedor { get => idVendedor;  }
       
-        public int CantidadUnidadesCotizadas { get => cantidadUnidadesCotizadas; }
+        public int UnidadesCotizadas { get => unidadesCotizadas; }
         public decimal ValorCotizacion { get => valorCotizacion; }
         public Prenda Prenda { get => prenda; set => prenda = value; }
 
@@ -30,7 +30,7 @@ namespace CotizadorTiendaMayorista.Modelo
             this.fechaHora = fechaHora;
             this.idVendedor = idVendedor;
             this.prenda = prenda;
-            this.cantidadUnidadesCotizadas = cantidadUnidadesCotizadas;
+            this.unidadesCotizadas = cantidadUnidadesCotizadas;
             this.valorCotizacion = valorCotizacion;
         }
 
@@ -38,17 +38,17 @@ namespace CotizadorTiendaMayorista.Modelo
         {
             if (_pants)
             {
-               return makePants(_chupin, _qualityStandard, _price, _count);
+               return MakePants(_chupin, _qualityStandard, _price, _count);
             }
             else
             {
-              return  makeShirt(_short, _mao, _qualityStandard, _price, _count);
+              return  MakeShirt(_short, _mao, _qualityStandard, _price, _count);
             }
            
           
         }
 
-        private static Prenda makeShirt(bool _short, bool _mao, bool _qualityStandard, decimal _price, int _count)
+        private static Prenda MakeShirt(bool _short, bool _mao, bool _qualityStandard, decimal _price, int _count)
         {
             Premium qualityP = new Premium("Premium");
             Standard qualityS = new Standard("Standard");
@@ -61,7 +61,7 @@ namespace CotizadorTiendaMayorista.Modelo
             return prendaTemp = new Camisa(_short? (ParManga)mangaC: (ParManga)mangal, _mao? (Cuello)cuelloMao : (Cuello)cuelloComun , _qualityStandard ? (Calidad)qualityS : (Calidad)qualityP, _price, _count);
         }
 
-        private static Prenda  makePants(bool _chupin, bool _qualityStandard, decimal _price, int _count)
+        private static Prenda MakePants(bool _chupin, bool _qualityStandard, decimal _price, int _count)
         {
             Premium qualityP = new Premium("Premium");
             Standard qualityS = new Standard("Standard");

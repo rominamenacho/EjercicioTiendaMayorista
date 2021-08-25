@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CotizadorTiendaMayorista.Modelo
 {
-    class Corta : ParManga
+   public class Corta : ParManga
     {
         public Corta(string descripcion) : base(descripcion)
         {

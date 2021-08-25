@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CotizadorTiendaMayorista.Modelo
 {
-    class Premium : Calidad
+    public class Premium : Calidad
     {
         public Premium(string descripcion) : base(descripcion)
         {
