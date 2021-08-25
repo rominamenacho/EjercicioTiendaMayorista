@@ -79,7 +79,7 @@ namespace CotizadorTiendaMayorista.Modelo
 
        
 
-        //    public void ImprimirCotizacionEn(Impresora i) { }
+        
 
     }
 }
