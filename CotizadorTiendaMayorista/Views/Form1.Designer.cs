@@ -59,8 +59,9 @@ namespace CotizadorTiendaMayorista
             this.linkHistorialCotizaciones = new System.Windows.Forms.LinkLabel();
             this.lbNombreVendedor = new System.Windows.Forms.Label();
             this.btCotizar = new System.Windows.Forms.Button();
-            this.lbPrecioCotizacion = new System.Windows.Forms.Label();
+            this.lbPrecioCotizacionMarco = new System.Windows.Forms.Label();
             this.printDocument1 = new System.Drawing.Printing.PrintDocument();
+            this.lbPrecioCotizacion = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -379,16 +380,26 @@ namespace CotizadorTiendaMayorista
             this.btCotizar.UseVisualStyleBackColor = false;
             this.btCotizar.Click += new System.EventHandler(this.btCotizar_Click);
             // 
+            // lbPrecioCotizacionMarco
+            // 
+            this.lbPrecioCotizacionMarco.AutoSize = true;
+            this.lbPrecioCotizacionMarco.Font = new System.Drawing.Font("Microsoft Sans Serif", 25.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbPrecioCotizacionMarco.ForeColor = System.Drawing.Color.SlateBlue;
+            this.lbPrecioCotizacionMarco.Location = new System.Drawing.Point(389, 670);
+            this.lbPrecioCotizacionMarco.Name = "lbPrecioCotizacionMarco";
+            this.lbPrecioCotizacionMarco.Size = new System.Drawing.Size(334, 51);
+            this.lbPrecioCotizacionMarco.TabIndex = 5;
+            this.lbPrecioCotizacionMarco.Text = "$ : __________";
+            // 
             // lbPrecioCotizacion
             // 
             this.lbPrecioCotizacion.AutoSize = true;
             this.lbPrecioCotizacion.Font = new System.Drawing.Font("Microsoft Sans Serif", 25.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbPrecioCotizacion.ForeColor = System.Drawing.Color.SlateBlue;
-            this.lbPrecioCotizacion.Location = new System.Drawing.Point(368, 655);
+            this.lbPrecioCotizacion.ForeColor = System.Drawing.Color.MediumSlateBlue;
+            this.lbPrecioCotizacion.Location = new System.Drawing.Point(485, 655);
             this.lbPrecioCotizacion.Name = "lbPrecioCotizacion";
-            this.lbPrecioCotizacion.Size = new System.Drawing.Size(334, 51);
-            this.lbPrecioCotizacion.TabIndex = 5;
-            this.lbPrecioCotizacion.Text = "$ : __________";
+            this.lbPrecioCotizacion.Size = new System.Drawing.Size(0, 52);
+            this.lbPrecioCotizacion.TabIndex = 6;
             // 
             // Formulario
             // 
@@ -397,6 +408,7 @@ namespace CotizadorTiendaMayorista
             this.BackColor = System.Drawing.SystemColors.Menu;
             this.ClientSize = new System.Drawing.Size(804, 767);
             this.Controls.Add(this.lbPrecioCotizacion);
+            this.Controls.Add(this.lbPrecioCotizacionMarco);
             this.Controls.Add(this.btCotizar);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel3);
@@ -460,8 +472,9 @@ namespace CotizadorTiendaMayorista
         private System.Windows.Forms.TextBox txtCant;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button btCotizar;
-        private System.Windows.Forms.Label lbPrecioCotizacion;
+        private System.Windows.Forms.Label lbPrecioCotizacionMarco;
         private System.Drawing.Printing.PrintDocument printDocument1;
+        private System.Windows.Forms.Label lbPrecioCotizacion;
     }
 }
 
