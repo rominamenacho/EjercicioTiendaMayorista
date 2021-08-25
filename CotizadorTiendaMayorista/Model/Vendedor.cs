@@ -24,8 +24,6 @@ namespace CotizadorTiendaMayorista.Modelo
         public Tienda Tienda { get => tienda; set => tienda = value; }
         public List<Cotizacion> Historial { get => historial; }
 
-      
-
         public Vendedor(int idVendedor, string nombre, string apellido)
         {
             this.idVendedor = idVendedor;

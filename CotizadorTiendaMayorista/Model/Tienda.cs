@@ -36,15 +36,15 @@ namespace CotizadorTiendaMayorista.Modelo
 
             foreach (Prenda p in temp)
             {
-                if (p is Pantalon && p.CantidadStock >= prenda.CantidadStock)
+                if (p is Pantalon 
+                    && StockEnough(p, prenda))
                 {
                     init.LabelStock = p.CantidadStock.ToString();
                     ret = true;
                 }
-                else if (p is Camisa &&
-                      ((Camisa)p).Cuello.GetType() == ((Camisa)prenda).Cuello.GetType()
-                      && ((Camisa)p).Manga.GetType() == ((Camisa)prenda).Manga.GetType()
-                      && p.CantidadStock >= prenda.CantidadStock)
+                else if (p is Camisa 
+                        && Match(p, prenda)
+                        && StockEnough(p, prenda))
                 {
                     init.LabelStock = p.CantidadStock.ToString();
                     ret = true;
@@ -55,6 +55,13 @@ namespace CotizadorTiendaMayorista.Modelo
             return ret;
         }
 
+        private bool Match(Prenda prendaLista, Prenda prendaCotizacion) {
+            return (((Camisa)prendaLista).Cuello.GetType() == ((Camisa)prendaCotizacion).Cuello.GetType()
+                && ((Camisa)prendaLista).Manga.GetType() == ((Camisa)prendaCotizacion).Manga.GetType());
+        }
+        private bool StockEnough(Prenda prendaLista, Prenda prendaCotizacion) {
+            return prendaLista.CantidadStock >= prendaCotizacion.CantidadStock;
+        }
 
     }
 }

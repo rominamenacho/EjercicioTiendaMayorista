@@ -1,5 +1,6 @@
-C:\Users\54926\source\repos\CotizadorTiendaMayorista\CotizadorTiendaMayorista\obj\Debug\CotizadorTiendaMayorista.csproj.AssemblyReference.cache
+C:\Users\54926\source\repos\CotizadorTiendaMayorista\CotizadorTiendaMayorista\obj\Debug\CotizadorTiendaMayorista.Formulario.resources
 C:\Users\54926\source\repos\CotizadorTiendaMayorista\CotizadorTiendaMayorista\obj\Debug\CotizadorTiendaMayorista.Properties.Resources.resources
+C:\Users\54926\source\repos\CotizadorTiendaMayorista\CotizadorTiendaMayorista\obj\Debug\CotizadorTiendaMayorista.Form2.resources
 C:\Users\54926\source\repos\CotizadorTiendaMayorista\CotizadorTiendaMayorista\obj\Debug\CotizadorTiendaMayorista.csproj.GenerateResource.cache
 C:\Users\54926\source\repos\CotizadorTiendaMayorista\CotizadorTiendaMayorista\obj\Debug\CotizadorTiendaMayorista.csproj.CoreCompileInputs.cache
 C:\Users\54926\source\repos\CotizadorTiendaMayorista\CotizadorTiendaMayorista\bin\Debug\CotizadorTiendaMayorista.exe.config
@@ -7,5 +8,3 @@ C:\Users\54926\source\repos\CotizadorTiendaMayorista\CotizadorTiendaMayorista\bi
 C:\Users\54926\source\repos\CotizadorTiendaMayorista\CotizadorTiendaMayorista\bin\Debug\CotizadorTiendaMayorista.pdb
 C:\Users\54926\source\repos\CotizadorTiendaMayorista\CotizadorTiendaMayorista\obj\Debug\CotizadorTiendaMayorista.exe
 C:\Users\54926\source\repos\CotizadorTiendaMayorista\CotizadorTiendaMayorista\obj\Debug\CotizadorTiendaMayorista.pdb
-C:\Users\54926\source\repos\CotizadorTiendaMayorista\CotizadorTiendaMayorista\obj\Debug\CotizadorTiendaMayorista.Formulario.resources
-C:\Users\54926\source\repos\CotizadorTiendaMayorista\CotizadorTiendaMayorista\obj\Debug\CotizadorTiendaMayorista.Form2.resources
