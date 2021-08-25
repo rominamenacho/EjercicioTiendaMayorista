@@ -11,22 +11,18 @@ namespace CotizadorTiendaMayorista.Controllers
     {
         private Tienda tienda;
         private Vendedor vendedor;
+        private string labelStock;
 
         public Tienda Tienda { get => tienda; set => tienda = value; }
         internal Vendedor Vendedor { get => vendedor; set => vendedor = value; }
-
-
-        private string labelStock;
         public string LabelStock { get => labelStock; set => labelStock = value; }
        
-
-      
-
         public InitController()
         {
            Vendedor = new Vendedor(356, "Juan ", "Topo ");
            Tienda= new Tienda("Falabella", "Avenida Siempreviva 742");
-
+           Vendedor.Tienda = Tienda;
+           Tienda.Init = this; 
 
             Premium premium = new Premium("Premium");
             Standard standard = new Standard("Standard");
@@ -71,25 +67,5 @@ namespace CotizadorTiendaMayorista.Controllers
         }
 
 
-        public string NombreTienda()
-        {
-            return Tienda.Nombre;
-        }
-        public string DireccionTienda()
-        {
-            return Tienda.Direccion;
-        }
-        public string VendedorId()
-        {
-            return Vendedor.IdVendedor.ToString();
-        }
-        public string VendedorNombreApellido()
-        {
-            return (Vendedor.Nombre + Vendedor.Apellido);
-        }
-
-        //se podria agregar una funcion que actualice el lbStock segun las prendas que se carguen
-
-       
     }
 }

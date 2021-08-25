@@ -12,22 +12,25 @@ namespace CotizadorTiendaMayorista.Modelo
         private string nombre;
         private string apellido;
         private Cotizacion cotizacionActual;
+        private Tienda tienda;
+        private List<Cotizacion> historialCotizaciones;
+             
 
-        public List<Cotizacion> historialCotizaciones;
 
         public int IdVendedor { get => idVendedor; }
         public string Nombre { get => nombre;  }
         public string Apellido { get => apellido;  }
-        internal Cotizacion CotizacionActual { get => cotizacionActual; }
-       // -----el set seria el add de la clase list----- internal List<Cotizacion> HistorialCotizaciones { set => historialCotizaciones = value; }
+        internal Cotizacion CotizacionActual { get => cotizacionActual; set => cotizacionActual = value; }
+        public Tienda Tienda { get => tienda; set => tienda = value; }
+        public List<Cotizacion> HistorialCotizaciones { get => historialCotizaciones; set => historialCotizaciones = value; }
 
-        
         public Vendedor(int idVendedor, string nombre, string apellido)
         {
             this.idVendedor = idVendedor;
             this.nombre = nombre ?? throw new ArgumentNullException(nameof(nombre));
             this.apellido = apellido ?? throw new ArgumentNullException(nameof(apellido));
-          
+            HistorialCotizaciones = new List<Cotizacion>();
+
         }
         public Vendedor(int idVendedor, string nombre, string apellido, Cotizacion cotizacionActual)
         {
@@ -35,16 +38,42 @@ namespace CotizadorTiendaMayorista.Modelo
             this.nombre = nombre ?? throw new ArgumentNullException(nameof(nombre));
             this.apellido = apellido ?? throw new ArgumentNullException(nameof(apellido));
             this.cotizacionActual = cotizacionActual ?? throw new ArgumentNullException(nameof(cotizacionActual));
+            HistorialCotizaciones = new List<Cotizacion>();
         }
 
-        public void ImprimirHistorial(List<Cotizacion>  _historialCotizaciones) {
-        foreach( Cotizacion c in _historialCotizaciones)
+        internal decimal CreateCotizacion(bool pantalon, bool mangaCorta, bool cuelloMao, bool chupin, bool calidadStandard, int precio, int cantidad)
+        {
+            DateTime now = DateTime.Now;
+            Prenda temp = Cotizacion.MakeClothes(pantalon, mangaCorta, cuelloMao, chupin, calidadStandard, precio, cantidad);
+            decimal val = Calcular(temp, cantidad);
+
+            
+            if (Tienda.RecorrerStock(Tienda.Prendas, temp))
             {
-                
+                CotizacionActual = new Cotizacion(CreateIdCotizacion(), now, IdVendedor, temp, cantidad, val);
+
+                this.HistorialCotizaciones.Add(CotizacionActual);
+               
+                return CotizacionActual.ValorCotizacion;
             }
-        
+            else
+            {
+                return -1;
+            }
         }
 
-        public void RealizarCotizacion() { }
+    
+
+        private static int CreateIdCotizacion()
+        {
+            Random idRandom = new Random();
+            return idRandom.Next(1, 2147483647);
+        }
+
+        private static decimal Calcular(Prenda p, int _count)
+        {
+            return p.CalcularPrecio() * _count;
+        }
+
     }
 }

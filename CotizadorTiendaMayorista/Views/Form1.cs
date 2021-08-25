@@ -23,18 +23,19 @@ namespace CotizadorTiendaMayorista
         private void Form1_Load(object sender, EventArgs e)
         {
            
-             init = new InitController();
-            lbNombreTienda.Text = init.NombreTienda();
-            lbDireccion.Text = init.DireccionTienda();
-            lbNombreVendedor.Text = init.VendedorNombreApellido() + " | ID:" + init.VendedorId();
-
+            init = new InitController();
+            lbNombreTienda.Text = init.Tienda.Nombre;
+            lbDireccion.Text = init.Tienda.Direccion;
+            lbNombreVendedor.Text = init.Vendedor.Nombre + init.Vendedor.Apellido + " | ID:" + init.Vendedor.IdVendedor;
+            rbCamisa.Checked = true;
+            cbChupin.Enabled = false;
         }
 
       
 
         private void rbCamisa_CheckedChanged(object sender, EventArgs e)
         {
-           // rbPantalon.Enabled = false;
+            rbPantalon.Checked = false;
             cbChupin.Enabled = false;
             cbCuelloMao.Enabled = true;
             cbMangaCorta.Enabled = true;
@@ -106,7 +107,7 @@ namespace CotizadorTiendaMayorista
                 else
                 {
                 ActualizarLabelStock();
-                lbPrecioCotizacion.Text = retorno.ToString();
+                ActualizarValorCotizacion( retorno);
                 }
             }
             
@@ -125,7 +126,11 @@ namespace CotizadorTiendaMayorista
         {
             labelstock.Text = init.LabelStock; 
         }
-       
+
+        private void ActualizarValorCotizacion(decimal value) {
+            lbPrecioCotizacion.Text = value.ToString();
+        }
+
         private bool validar(GroupBox gb)
         {
              bool camposVacios= false;
