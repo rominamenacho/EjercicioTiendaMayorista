@@ -13,7 +13,7 @@ namespace CotizadorTiendaMayorista.Modelo
         private string apellido;
         private Cotizacion cotizacionActual;
         private Tienda tienda;
-        private List<Cotizacion> historialCotizaciones;
+        private  List<Cotizacion> historialCotizaciones= new List<Cotizacion>();
              
 
 
@@ -22,14 +22,15 @@ namespace CotizadorTiendaMayorista.Modelo
         public string Apellido { get => apellido;  }
         internal Cotizacion CotizacionActual { get => cotizacionActual; set => cotizacionActual = value; }
         public Tienda Tienda { get => tienda; set => tienda = value; }
-        public List<Cotizacion> HistorialCotizaciones { get => historialCotizaciones; set => historialCotizaciones = value; }
+        public List<Cotizacion> HistorialCotizaciones { get => historialCotizaciones; }
+
+      
 
         public Vendedor(int idVendedor, string nombre, string apellido)
         {
             this.idVendedor = idVendedor;
             this.nombre = nombre ?? throw new ArgumentNullException(nameof(nombre));
-            this.apellido = apellido ?? throw new ArgumentNullException(nameof(apellido));
-            HistorialCotizaciones = new List<Cotizacion>();
+            this.apellido = apellido ?? throw new ArgumentNullException(nameof(apellido));            
 
         }
         public Vendedor(int idVendedor, string nombre, string apellido, Cotizacion cotizacionActual)
@@ -38,10 +39,10 @@ namespace CotizadorTiendaMayorista.Modelo
             this.nombre = nombre ?? throw new ArgumentNullException(nameof(nombre));
             this.apellido = apellido ?? throw new ArgumentNullException(nameof(apellido));
             this.cotizacionActual = cotizacionActual ?? throw new ArgumentNullException(nameof(cotizacionActual));
-            HistorialCotizaciones = new List<Cotizacion>();
+         
         }
 
-        internal decimal CreateCotizacion(bool pantalon, bool mangaCorta, bool cuelloMao, bool chupin, bool calidadStandard, int precio, int cantidad)
+        public decimal CreateCotizacion(bool pantalon, bool mangaCorta, bool cuelloMao, bool chupin, bool calidadStandard, int precio, int cantidad)
         {
             DateTime now = DateTime.Now;
             Prenda temp = Cotizacion.MakeClothes(pantalon, mangaCorta, cuelloMao, chupin, calidadStandard, precio, cantidad);
@@ -52,8 +53,8 @@ namespace CotizadorTiendaMayorista.Modelo
             {
                 CotizacionActual = new Cotizacion(CreateIdCotizacion(), now, IdVendedor, temp, cantidad, val);
 
-                this.HistorialCotizaciones.Add(CotizacionActual);
-               
+                HistorialCotizaciones.Add(CotizacionActual);
+                
                 return CotizacionActual.ValorCotizacion;
             }
             else
@@ -63,7 +64,6 @@ namespace CotizadorTiendaMayorista.Modelo
         }
 
     
-
         private static int CreateIdCotizacion()
         {
             Random idRandom = new Random();

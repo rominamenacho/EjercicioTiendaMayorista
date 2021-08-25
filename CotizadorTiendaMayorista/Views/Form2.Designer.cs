@@ -40,16 +40,15 @@ namespace CotizadorTiendaMayorista
             this.lbNombreTienda2 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.dgv1 = new System.Windows.Forms.DataGridView();
-            this.label3 = new System.Windows.Forms.Label();
-            this.initControllerBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.initControllerBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.initControllerBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
             this.idVendedor = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.idCotizacion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.fechaHora = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.prenda = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cantidadUnidadesCotizadas = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.valor = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.initControllerBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.initControllerBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.initControllerBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
             this.panel1.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -115,7 +114,7 @@ namespace CotizadorTiendaMayorista
             this.lbDireccion2.AutoSize = true;
             this.lbDireccion2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbDireccion2.ForeColor = System.Drawing.Color.SlateBlue;
-            this.lbDireccion2.Location = new System.Drawing.Point(518, 11);
+            this.lbDireccion2.Location = new System.Drawing.Point(835, 11);
             this.lbDireccion2.Name = "lbDireccion2";
             this.lbDireccion2.Size = new System.Drawing.Size(234, 18);
             this.lbDireccion2.TabIndex = 1;
@@ -155,34 +154,13 @@ namespace CotizadorTiendaMayorista
             this.prenda,
             this.cantidadUnidadesCotizadas,
             this.valor});
-            this.dgv1.Location = new System.Drawing.Point(63, 257);
+            this.dgv1.Location = new System.Drawing.Point(37, 257);
             this.dgv1.Name = "dgv1";
             this.dgv1.ReadOnly = true;
             this.dgv1.RowHeadersWidth = 51;
             this.dgv1.RowTemplate.Height = 24;
-            this.dgv1.Size = new System.Drawing.Size(979, 150);
+            this.dgv1.Size = new System.Drawing.Size(1032, 347);
             this.dgv1.TabIndex = 7;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(111, 470);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(46, 17);
-            this.label3.TabIndex = 8;
-            this.label3.Text = "label3";
-            // 
-            // initControllerBindingSource
-            // 
-            this.initControllerBindingSource.DataSource = typeof(CotizadorTiendaMayorista.Controllers.InitController);
-            // 
-            // initControllerBindingSource1
-            // 
-            this.initControllerBindingSource1.DataSource = typeof(CotizadorTiendaMayorista.Controllers.InitController);
-            // 
-            // initControllerBindingSource2
-            // 
-            this.initControllerBindingSource2.DataSource = typeof(CotizadorTiendaMayorista.Controllers.InitController);
             // 
             // idVendedor
             // 
@@ -190,7 +168,7 @@ namespace CotizadorTiendaMayorista
             this.idVendedor.MinimumWidth = 6;
             this.idVendedor.Name = "idVendedor";
             this.idVendedor.ReadOnly = true;
-            this.idVendedor.Width = 125;
+            this.idVendedor.Width = 110;
             // 
             // idCotizacion
             // 
@@ -198,7 +176,7 @@ namespace CotizadorTiendaMayorista
             this.idCotizacion.MinimumWidth = 6;
             this.idCotizacion.Name = "idCotizacion";
             this.idCotizacion.ReadOnly = true;
-            this.idCotizacion.Width = 125;
+            this.idCotizacion.Width = 110;
             // 
             // fechaHora
             // 
@@ -214,7 +192,7 @@ namespace CotizadorTiendaMayorista
             this.prenda.MinimumWidth = 6;
             this.prenda.Name = "prenda";
             this.prenda.ReadOnly = true;
-            this.prenda.Width = 125;
+            this.prenda.Width = 90;
             // 
             // cantidadUnidadesCotizadas
             // 
@@ -222,7 +200,7 @@ namespace CotizadorTiendaMayorista
             this.cantidadUnidadesCotizadas.MinimumWidth = 6;
             this.cantidadUnidadesCotizadas.Name = "cantidadUnidadesCotizadas";
             this.cantidadUnidadesCotizadas.ReadOnly = true;
-            this.cantidadUnidadesCotizadas.Width = 200;
+            this.cantidadUnidadesCotizadas.Width = 170;
             // 
             // valor
             // 
@@ -230,21 +208,34 @@ namespace CotizadorTiendaMayorista
             this.valor.MinimumWidth = 6;
             this.valor.Name = "valor";
             this.valor.ReadOnly = true;
-            this.valor.Width = 125;
+            this.valor.Width = 115;
+            // 
+            // initControllerBindingSource
+            // 
+            this.initControllerBindingSource.DataSource = typeof(CotizadorTiendaMayorista.Controllers.InitController);
+            // 
+            // initControllerBindingSource1
+            // 
+            this.initControllerBindingSource1.DataSource = typeof(CotizadorTiendaMayorista.Controllers.InitController);
+            // 
+            // initControllerBindingSource2
+            // 
+            this.initControllerBindingSource2.DataSource = typeof(CotizadorTiendaMayorista.Controllers.InitController);
             // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1109, 633);
-            this.Controls.Add(this.label3);
             this.Controls.Add(this.dgv1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form2";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Historial de Cotizaciones";
             this.Load += new System.EventHandler(this.Form2_Load);
             this.panel1.ResumeLayout(false);
@@ -276,7 +267,6 @@ namespace CotizadorTiendaMayorista
         private System.Windows.Forms.BindingSource initControllerBindingSource1;
         private System.Windows.Forms.BindingSource initControllerBindingSource2;
         private System.Windows.Forms.DataGridView dgv1;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.DataGridViewTextBoxColumn idVendedor;
         private System.Windows.Forms.DataGridViewTextBoxColumn idCotizacion;
         private System.Windows.Forms.DataGridViewTextBoxColumn fechaHora;

@@ -60,6 +60,7 @@ namespace CotizadorTiendaMayorista
             this.lbNombreVendedor = new System.Windows.Forms.Label();
             this.btCotizar = new System.Windows.Forms.Button();
             this.lbPrecioCotizacion = new System.Windows.Forms.Label();
+            this.printDocument1 = new System.Drawing.Printing.PrintDocument();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -105,7 +106,7 @@ namespace CotizadorTiendaMayorista
             this.lbDireccion.AutoSize = true;
             this.lbDireccion.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbDireccion.ForeColor = System.Drawing.Color.SlateBlue;
-            this.lbDireccion.Location = new System.Drawing.Point(518, 11);
+            this.lbDireccion.Location = new System.Drawing.Point(541, 11);
             this.lbDireccion.Name = "lbDireccion";
             this.lbDireccion.Size = new System.Drawing.Size(234, 18);
             this.lbDireccion.TabIndex = 1;
@@ -239,7 +240,7 @@ namespace CotizadorTiendaMayorista
             this.labelstock.AutoSize = true;
             this.labelstock.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelstock.ForeColor = System.Drawing.Color.Black;
-            this.labelstock.Location = new System.Drawing.Point(285, 28);
+            this.labelstock.Location = new System.Drawing.Point(290, 28);
             this.labelstock.Name = "labelstock";
             this.labelstock.Size = new System.Drawing.Size(14, 18);
             this.labelstock.TabIndex = 1;
@@ -347,7 +348,7 @@ namespace CotizadorTiendaMayorista
             this.linkHistorialCotizaciones.Cursor = System.Windows.Forms.Cursors.Hand;
             this.linkHistorialCotizaciones.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linkHistorialCotizaciones.LinkColor = System.Drawing.Color.SlateBlue;
-            this.linkHistorialCotizaciones.Location = new System.Drawing.Point(518, 11);
+            this.linkHistorialCotizaciones.Location = new System.Drawing.Point(541, 11);
             this.linkHistorialCotizaciones.Name = "linkHistorialCotizaciones";
             this.linkHistorialCotizaciones.Size = new System.Drawing.Size(175, 18);
             this.linkHistorialCotizaciones.TabIndex = 1;
@@ -394,7 +395,7 @@ namespace CotizadorTiendaMayorista
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Menu;
-            this.ClientSize = new System.Drawing.Size(806, 767);
+            this.ClientSize = new System.Drawing.Size(804, 767);
             this.Controls.Add(this.lbPrecioCotizacion);
             this.Controls.Add(this.btCotizar);
             this.Controls.Add(this.panel4);
@@ -403,6 +404,7 @@ namespace CotizadorTiendaMayorista
             this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ForeColor = System.Drawing.SystemColors.Control;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.Name = "Formulario";
@@ -459,6 +461,7 @@ namespace CotizadorTiendaMayorista
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button btCotizar;
         private System.Windows.Forms.Label lbPrecioCotizacion;
+        private System.Drawing.Printing.PrintDocument printDocument1;
     }
 }
 

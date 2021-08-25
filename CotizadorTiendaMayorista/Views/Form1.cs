@@ -110,14 +110,15 @@ namespace CotizadorTiendaMayorista
                 ActualizarValorCotizacion( retorno);
                 }
             }
-            
+
+          //  limpiarForm();
 
         }
 
      
         private void linkHistorialCotizaciones_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            Form2 segundoFrom = new Form2(ref nuevaCotizacion);
+            Form2 segundoFrom = new Form2(ref init);
             segundoFrom.ShowDialog();
            
         }
@@ -155,8 +156,21 @@ namespace CotizadorTiendaMayorista
                 return true;
             }
         }
-    
-   
+
+        private void limpiarForm() {
+
+            rbCamisa.Checked = true;
+            cbChupin.Enabled = false;
+            cbCuelloMao.Checked = false;
+            cbMangaCorta.Checked = false;
+            cbChupin.Checked = false;
+            txtCant.Text = "";
+            txtPrecio.Text = "";
+            lbPrecioCotizacion.Text = " ";
+            labelstock.Text = "-";
+        }
+
+     
     }
     
 }
