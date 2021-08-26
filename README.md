@@ -8,4 +8,4 @@ Diagrama de Clases.
 # Como clonar el proyecto
 Descargar .zip o en el bash de git ejecutar: git clone https://github.com/rominamenacho/EjercicioTiendaMayorista.git
 # Ejecutar
-Utilice el archivo .exe
+Utilice el archivo setup
