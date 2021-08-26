@@ -41,28 +41,14 @@ namespace CotizadorTiendaMayorista.Modelo
         {
             decimal retorno = base.CalculatePrice();
             if (Manga is Corta ) {
-                if(Cuello is Mao)
-                {
-                    retorno = retorno - System.Math.Round(System.Convert.ToDecimal(retorno * 0.10M), 2);// rn1
 
-                    retorno = retorno + System.Math.Round(System.Convert.ToDecimal(retorno * 0.03M), 2); ; //rn2
-
-                 
-                }
-                else
-                {
-                    retorno = retorno - System.Math.Round(System.Convert.ToDecimal(retorno * 0.10M), 2);// rn1
-
-
-                }
-
-            }
-            else
-            {
-                if(Cuello is Mao)
+                retorno = retorno - System.Math.Round(System.Convert.ToDecimal(retorno * 0.10M), 2);// rn1
+               
+                if (Cuello is Mao)
                 {
                     retorno = retorno + System.Math.Round(System.Convert.ToDecimal(retorno * 0.03M), 2); ; //rn2
                 }
+                
             }
            
 
