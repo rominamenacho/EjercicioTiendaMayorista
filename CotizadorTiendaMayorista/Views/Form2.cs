@@ -43,8 +43,9 @@ namespace CotizadorTiendaMayorista
                     dgv1.Rows[n].Cells[1].Value = i.IdCotizacion;
                     dgv1.Rows[n].Cells[2].Value = i.FechaHora;
                     dgv1.Rows[n].Cells[3].Value = i.Prenda.GetType().Name;
-                    dgv1.Rows[n].Cells[4].Value = i.UnidadesCotizadas;
-                    dgv1.Rows[n].Cells[5].Value = i.ValorCotizacion;
+                    dgv1.Rows[n].Cells[4].Value = i.Prenda.Calidad.Descripcion;
+                    dgv1.Rows[n].Cells[5].Value = i.UnidadesCotizadas;
+                    dgv1.Rows[n].Cells[6].Value = i.ValorCotizacion;
 
                 }
             }
@@ -53,6 +54,11 @@ namespace CotizadorTiendaMayorista
                 MessageBox.Show("No hay historial de cotizaciones");
             }
            
+        }
+
+        private void dgv1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

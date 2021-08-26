@@ -10,9 +10,18 @@
         public int CantidadStock { get => cantidad;  }
         public Calidad Calidad { get => calidad;  }
 
-        public Prenda( Calidad calidad, decimal precioUnitario, int cantidad)
+        public Prenda( bool calidadStandard, decimal precioUnitario, int cantidad)
         {
-            this.calidad = calidad;
+            if (calidadStandard)
+            {
+                this.calidad = new Standard("Standard");
+            }
+            else
+            {
+                this.calidad = new Premium("Premium");
+            }
+         
+
             this.precioUnitario = precioUnitario;
             this.cantidad = cantidad;
 

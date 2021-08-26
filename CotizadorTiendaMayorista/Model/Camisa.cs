@@ -15,11 +15,26 @@ namespace CotizadorTiendaMayorista.Modelo
         internal ParManga Manga { get => manga; set => manga = value; }
 
      
-        public Camisa(ParManga manga, Cuello cuello,Calidad calidad, decimal precioUnitario, int cantidadStock) 
-            : base(calidad, precioUnitario, cantidadStock)
+        public Camisa(bool mangaCorta, bool cuelloMao ,bool standard, decimal precioUnitario, int cantidadStock) 
+            : base(standard, precioUnitario, cantidadStock)
         {
-            this.Manga = manga;
-            this.Cuello = cuello;
+            if (mangaCorta)
+            {
+                this.Manga = new Corta("Manga corta");
+            }
+            else
+            {
+                this.Manga = new Larga("Manga larga");
+            }
+
+            if (cuelloMao)
+            {
+                this.Cuello = new Mao("Cuello Mao");
+            }
+            else
+            {
+                this.Cuello = new CuelloComun("Cuello común");
+            }
         }
 
         public override decimal CalculatePrice()

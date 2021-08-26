@@ -40,15 +40,16 @@ namespace CotizadorTiendaMayorista
             this.lbNombreTienda2 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.dgv1 = new System.Windows.Forms.DataGridView();
+            this.initControllerBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.initControllerBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.initControllerBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
             this.idVendedor = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.idCotizacion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.fechaHora = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.prenda = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Calidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cantidadUnidadesCotizadas = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.valor = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.initControllerBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.initControllerBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.initControllerBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
             this.panel1.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -152,6 +153,7 @@ namespace CotizadorTiendaMayorista
             this.idCotizacion,
             this.fechaHora,
             this.prenda,
+            this.Calidad,
             this.cantidadUnidadesCotizadas,
             this.valor});
             this.dgv1.Location = new System.Drawing.Point(37, 257);
@@ -161,6 +163,19 @@ namespace CotizadorTiendaMayorista
             this.dgv1.RowTemplate.Height = 24;
             this.dgv1.Size = new System.Drawing.Size(1032, 347);
             this.dgv1.TabIndex = 7;
+            this.dgv1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv1_CellContentClick);
+            // 
+            // initControllerBindingSource
+            // 
+            this.initControllerBindingSource.DataSource = typeof(CotizadorTiendaMayorista.Controllers.InitController);
+            // 
+            // initControllerBindingSource1
+            // 
+            this.initControllerBindingSource1.DataSource = typeof(CotizadorTiendaMayorista.Controllers.InitController);
+            // 
+            // initControllerBindingSource2
+            // 
+            this.initControllerBindingSource2.DataSource = typeof(CotizadorTiendaMayorista.Controllers.InitController);
             // 
             // idVendedor
             // 
@@ -194,6 +209,14 @@ namespace CotizadorTiendaMayorista
             this.prenda.ReadOnly = true;
             this.prenda.Width = 90;
             // 
+            // Calidad
+            // 
+            this.Calidad.HeaderText = "Calidad";
+            this.Calidad.MinimumWidth = 6;
+            this.Calidad.Name = "Calidad";
+            this.Calidad.ReadOnly = true;
+            this.Calidad.Width = 125;
+            // 
             // cantidadUnidadesCotizadas
             // 
             this.cantidadUnidadesCotizadas.HeaderText = "Cantidad unidades cotizadas";
@@ -209,18 +232,6 @@ namespace CotizadorTiendaMayorista
             this.valor.Name = "valor";
             this.valor.ReadOnly = true;
             this.valor.Width = 115;
-            // 
-            // initControllerBindingSource
-            // 
-            this.initControllerBindingSource.DataSource = typeof(CotizadorTiendaMayorista.Controllers.InitController);
-            // 
-            // initControllerBindingSource1
-            // 
-            this.initControllerBindingSource1.DataSource = typeof(CotizadorTiendaMayorista.Controllers.InitController);
-            // 
-            // initControllerBindingSource2
-            // 
-            this.initControllerBindingSource2.DataSource = typeof(CotizadorTiendaMayorista.Controllers.InitController);
             // 
             // Form2
             // 
@@ -271,6 +282,7 @@ namespace CotizadorTiendaMayorista
         private System.Windows.Forms.DataGridViewTextBoxColumn idCotizacion;
         private System.Windows.Forms.DataGridViewTextBoxColumn fechaHora;
         private System.Windows.Forms.DataGridViewTextBoxColumn prenda;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Calidad;
         private System.Windows.Forms.DataGridViewTextBoxColumn cantidadUnidadesCotizadas;
         private System.Windows.Forms.DataGridViewTextBoxColumn valor;
     }

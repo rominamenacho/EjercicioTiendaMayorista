@@ -8,8 +8,9 @@ namespace CotizadorTiendaMayorista.Modelo
 {
     public class Chupin : Pantalon
     {
-        public Chupin(string descripcion, Calidad calidad, decimal precioUnitario, int cantidadStock) : base(descripcion, calidad, precioUnitario, cantidadStock)
+        public Chupin(string descripcion, bool calidadStandard, decimal precioUnitario, int cantidadStock) : base(descripcion,  calidadStandard, precioUnitario, cantidadStock)
         {
+            this.Descripcion = descripcion;
         }
 
 
@@ -17,7 +18,7 @@ namespace CotizadorTiendaMayorista.Modelo
         {
             decimal retorno = base.CalculatePrice();
 
-            retorno = retorno+ System.Math.Round(System.Convert.ToDecimal(retorno * 0.12M), 2);
+            retorno = retorno- System.Math.Round(System.Convert.ToDecimal(retorno * 0.12M), 2);
 
             return retorno;
         }

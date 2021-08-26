@@ -24,43 +24,36 @@ namespace CotizadorTiendaMayorista.Controllers
            Vendedor.Tienda = Tienda;
            Tienda.Init = this; 
 
-            Premium premium = new Premium("Premium");
-            Standard standard = new Standard("Standard");
+           
 
-            Corta mangaCorta = new Corta("Manga corta");
-            Larga mangaLarga = new Larga("Manga larga");
-
-            Mao cuelloMao = new Mao("Cuello Mao");
-            CuelloComun cuelloComun = new CuelloComun("Cuello común");
-
-            Camisa camisaMCCMS = new Camisa(mangaCorta, cuelloMao, standard, 0, 100);
+            Camisa camisaMCCMS = new Camisa(true, true, true, 0, 100);
             Tienda.Prendas.Add(camisaMCCMS);
-            Camisa camisaMCCMP = new Camisa(mangaCorta, cuelloMao, premium, 0, 100);
+            Camisa camisaMCCMP = new Camisa(true, true, false, 0, 100);
             Tienda.Prendas.Add(camisaMCCMP);
-            Camisa camisaMCCCS = new Camisa(mangaCorta, cuelloComun, standard, 0, 150);
+            Camisa camisaMCCCS = new Camisa(true, false, true, 0, 150);
             Tienda.Prendas.Add(camisaMCCCS);
-            Camisa camisaMCCCP = new Camisa(mangaCorta, cuelloComun, premium, 0, 150);
+            Camisa camisaMCCCP = new Camisa(true, false, false, 0, 150);
             Tienda.Prendas.Add(camisaMCCCP);
 
 
-            Camisa camisaMLCMS = new Camisa(mangaLarga, cuelloMao, standard, 0, 75);
+            Camisa camisaMLCMS = new Camisa(false, true, true, 0, 75);
             Tienda.Prendas.Add(camisaMLCMS);
-            Camisa camisaMLCMP = new Camisa(mangaLarga, cuelloMao, premium, 0, 75);
+            Camisa camisaMLCMP = new Camisa(false, true, false, 0, 75);
             Tienda.Prendas.Add(camisaMLCMP);
-            Camisa camisaMLCCS = new Camisa(mangaLarga, cuelloComun, standard, 0, 175);
+            Camisa camisaMLCCS = new Camisa(false, false, true, 0, 175);
             Tienda.Prendas.Add(camisaMLCCS);
-            Camisa camisaMLCCP = new Camisa(mangaLarga, cuelloComun, premium, 0, 175);
+            Camisa camisaMLCCP = new Camisa(false, false, false, 0, 175);
             Tienda.Prendas.Add(camisaMLCCP);
 
 
-            Chupin prendaChupinStandard = new Chupin("Chupín Standard", standard,0,750);
+            Chupin prendaChupinStandard = new Chupin("Chupín Standard", true, 0,750);
             Tienda.Prendas.Add(prendaChupinStandard);
-            Chupin prendaChupinPremium = new Chupin("Chupín Premium", premium, 0, 750);
+            Chupin prendaChupinPremium = new Chupin("Chupín Premium", false, 0, 750);
             Tienda.Prendas.Add(prendaChupinPremium);
 
-            Comun pantalonComunStandard = new Comun("Pantalon Común Standard", standard, 0, 250);
+            PantalonComun pantalonComunStandard = new PantalonComun("Pantalon Común", true, 0, 250);
             Tienda.Prendas.Add(pantalonComunStandard);
-            Comun pantalonComunPremium = new Comun("Pantalon Común Premium", premium, 0, 250);
+            PantalonComun pantalonComunPremium = new PantalonComun("Pantalon Común", false, 0, 250);
             Tienda.Prendas.Add(pantalonComunPremium);
 
 

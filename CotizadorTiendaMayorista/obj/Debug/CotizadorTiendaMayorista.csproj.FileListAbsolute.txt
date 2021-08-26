@@ -8,3 +8,8 @@ C:\Users\54926\source\repos\CotizadorTiendaMayorista\CotizadorTiendaMayorista\bi
 C:\Users\54926\source\repos\CotizadorTiendaMayorista\CotizadorTiendaMayorista\bin\Debug\CotizadorTiendaMayorista.pdb
 C:\Users\54926\source\repos\CotizadorTiendaMayorista\CotizadorTiendaMayorista\obj\Debug\CotizadorTiendaMayorista.exe
 C:\Users\54926\source\repos\CotizadorTiendaMayorista\CotizadorTiendaMayorista\obj\Debug\CotizadorTiendaMayorista.pdb
+C:\Users\54926\source\repos\CotizadorTiendaMayorista\CotizadorTiendaMayorista\bin\Debug\CotizadorTiendaMayorista.exe.manifest
+C:\Users\54926\source\repos\CotizadorTiendaMayorista\CotizadorTiendaMayorista\bin\Debug\CotizadorTiendaMayorista.application
+C:\Users\54926\source\repos\CotizadorTiendaMayorista\CotizadorTiendaMayorista\obj\Debug\CotizadorTiendaMayorista.csproj.AssemblyReference.cache
+C:\Users\54926\source\repos\CotizadorTiendaMayorista\CotizadorTiendaMayorista\obj\Debug\CotizadorTiendaMayorista.exe.manifest
+C:\Users\54926\source\repos\CotizadorTiendaMayorista\CotizadorTiendaMayorista\obj\Debug\CotizadorTiendaMayorista.application

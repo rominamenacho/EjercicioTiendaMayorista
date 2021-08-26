@@ -12,7 +12,7 @@ namespace CotizadorTiendaMayorista.Modelo
 
          public string Descripcion { get => descripcion; set => descripcion = value; }
 
-        protected Pantalon(string descripcion, Calidad calidad, decimal precioUnitario, int cantidadStock) : base(calidad, precioUnitario, cantidadStock)
+        protected Pantalon(string descripcion, bool standard, decimal precioUnitario, int cantidadStock) : base(standard, precioUnitario, cantidadStock)
         {
             this.Descripcion = descripcion;
         }

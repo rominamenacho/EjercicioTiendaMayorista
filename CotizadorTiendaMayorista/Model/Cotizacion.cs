@@ -29,9 +29,12 @@ namespace CotizadorTiendaMayorista.Modelo
             this.idCotizacion = idCotizacion;
             this.fechaHora = fechaHora;
             this.idVendedor = idVendedor;
-            this.prenda = prenda;
             this.unidadesCotizadas = cantidadUnidadesCotizadas;
             this.valorCotizacion = valorCotizacion;
+           
+            this.prenda = prenda;
+
+           
         }
 
         public static Prenda MakeClothes(bool _pants, bool _short, bool _mao, bool _chupin, bool _qualityStandard, decimal _price, int _count)
@@ -50,30 +53,24 @@ namespace CotizadorTiendaMayorista.Modelo
 
         private static Prenda MakeShirt(bool _short, bool _mao, bool _qualityStandard, decimal _price, int _count)
         {
-            Premium qualityP = new Premium("Premium");
-            Standard qualityS = new Standard("Standard");
-            Corta mangaC = new Corta("Manga Corta");
-            Larga mangal = new Larga("Manga Larga");
-            Mao cuelloMao = new Mao("Cuello Mao");
-            CuelloComun cuelloComun = new CuelloComun("Cuello Común");
+                      
             Prenda prendaTemp;
          
-            return prendaTemp = new Camisa(_short? (ParManga)mangaC: (ParManga)mangal, _mao? (Cuello)cuelloMao : (Cuello)cuelloComun , _qualityStandard ? (Calidad)qualityS : (Calidad)qualityP, _price, _count);
+            return prendaTemp = new Camisa(_short , _mao , _qualityStandard, _price, _count);
         }
 
         private static Prenda MakePants(bool _chupin, bool _qualityStandard, decimal _price, int _count)
         {
-            Premium qualityP = new Premium("Premium");
-            Standard qualityS = new Standard("Standard");
+           
             Prenda prendaTemp;
 
             if (_chupin)
             {
-                return prendaTemp = new Chupin("Chupin", _qualityStandard ? (Calidad)qualityS : (Calidad)qualityP, _price, _count);
+                return prendaTemp = new Chupin("Chupin", _qualityStandard, _price, _count);
             }
             else
             {
-                return prendaTemp = new Comun("Comun", _qualityStandard ? (Calidad)qualityS : (Calidad)qualityP, _price, _count);
+                return prendaTemp = new PantalonComun("Comun", _qualityStandard, _price, _count);
             }
         }
 
